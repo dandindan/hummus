@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hummus gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"
+    />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon (4).ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"
+    />
+    <style>
+      html {
+        background-color: black;
+        font-size: 16px; /* Set a base font size for rem calculations */
+      }
+      body {
+        background-color: black;
+        background: #000000;
+        margin: 0; /* Remove default margin for better mobile display */
+      }
+      .title {
+        text-align: center;
+        margin-top: 1rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 1.5rem;
+        color: white; /* Added for visibility on black background */
+      }
+      .portfolio_slider {
+        margin: 1.25rem auto; /* 20px -> 1.25rem */
+        max-width: 75rem; /* 1200px -> 75rem */
+        border: 0; /* Removed border for cleaner mobile look */
+        background-color: rgb(9, 0, 0);
+      }
+      .inner {
+        padding: 0;
+        position: relative;
+      }
+      .text_bottom {
+        color: rgb(255, 255, 255);
+        background: rgba(127, 255, 212, 0.253);
+        padding: 0.5em;
+        min-width: 100%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 1.5rem; /* Already in rem */
+        white-space: nowrap;
+      }
+      .slick-prev:before,
+      .slick-next:before {
+        color: white !important;
+        font-size: 1.875rem; /* 30px -> 1.875rem */
+      }
+      .slick-prev,
+      .slick-next {
+        width: 2.5rem; /* 40px -> 2.5rem */
+        height: 2.5rem; /* 40px -> 2.5rem */
+        z-index: 1;
+      }
+      .slick-prev {
+        left: 0.9375rem; /* 15px -> 0.9375rem */
+      }
+      .slick-next {
+        right: 0.9375rem; /* 15px -> 0.9375rem */
+      }
+      .slick-slide {
+        text-align: center;
+        max-width: 100%;
+      }
+      .slick-slide img {
+        display: inline-block;
+        width: 100%;
+        height: auto;
+        max-height: 80vh;
+      }
+
+      /* Media query for smaller screens */
+      @media (max-width: 48rem) {
+        /* 768px breakpoint */
+        .title {
+          font-size: 1.25rem;
+        }
+        .portfolio_slider {
+          margin: 0.625rem auto; /* 10px -> 0.625rem */
+        }
+        .text_bottom {
+          font-size: 1rem;
+        }
+        .slick-prev:before,
+        .slick-next:before {
+          font-size: 1.5rem; /* Slightly smaller arrows on mobile */
+        }
+        .slick-prev,
+        .slick-next {
+          width: 2rem;
+          height: 2rem;
+        }
+        .slick-prev {
+          left: 0.625rem; /* 10px -> 0.625rem */
+        }
+        .slick-next {
+          right: 0.625rem; /* 10px -> 0.625rem */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="title">גלרית חומוס עין כרמל</h2>
+    <div class="gallery gallery-responsive portfolio_slider">
+      <div class="inner">
+        <img src="./images/3.jpeg" />
+        <div class="text_bottom">333333333333</div>
+      </div>
+      <div class="inner">
+        <img src="./images/4.jpeg" />
+        <div class="text_bottom">4444444444444</div>
+      </div>
+      <div class="inner">
+        <img src="./images/5.jpeg" />
+        <div class="text_bottom">55555555555555</div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $('.gallery-responsive').slick({
+          dots: false,
+          infinite: true,
+          speed: 600,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 2500,
+        });
+      });
+    </script>
+  </body>
+</html>
